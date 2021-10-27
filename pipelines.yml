@@ -1,8 +1,23 @@
 pipelines:
  - name: sleep_pipeline
+   resources:
+    - name: gitresource
+      type: GitRepo
+      configuration:
+        path: ~rahulj/test-fork
+        gitProvider: github
+        buildOn:
+         commit: false
+         pullRequestCreate: true
+         pullRequestClose: true
+        branches:
+          include: ^{{gitBranch}}$
    steps:
      - name: step1
        type: Bash
+       configuration:
+         inputResources:
+           - name: gitresource
        execution:
          onExecute:
            - echo "hello test world updated 2 1"
