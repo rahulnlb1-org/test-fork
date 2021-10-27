@@ -21,4 +21,4 @@ pipelines:
            - name: gitresource
        execution:
          onExecute:
-           - echo "hello test world updated 2 1"
+           - echo "hello test world updated"
