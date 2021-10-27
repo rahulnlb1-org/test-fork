@@ -2,7 +2,7 @@ resources:
  - name: gitresource
    type: GitRepo
    configuration:
-     path: rahulnlb1/test-fork
+     path: rahulnlb1-org/test-fork
      gitProvider: github
      buildOn:
       commit: false
